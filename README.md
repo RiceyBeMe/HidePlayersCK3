@@ -1,2 +1,2 @@
 # HidePlayersCK3
- Hide players in CK3 mutliplayer
+Hide players in CK3 mutliplayer
