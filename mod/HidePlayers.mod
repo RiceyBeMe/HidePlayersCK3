@@ -4,4 +4,4 @@ tags={
 }
 name="Hide Players"
 supported_version="1.5.1.1"
-path="mod/HidePlayers"
+path="mod/hideplayers"
