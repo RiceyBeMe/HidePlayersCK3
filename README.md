@@ -8,3 +8,10 @@ GitHub repo is [HidePlayersCK3](https://github.com/RiceyBeMe/HidePlayersCK3), pl
 
 - Removed the "Player Decides" acceptance dialogue when interacting with other players. Will now display same as if other player was AI
 - Removed the Coat of Arms (CoA) & Character name from multiplayer lobby
+
+## Branches
+|Branch|Description|
+|:-|:-|
+|main|Stable version|
+|dev|Development/Working|
+|ref|Unmodified files to compare again other branches|
