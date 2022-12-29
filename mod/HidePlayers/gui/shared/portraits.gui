@@ -1827,16 +1827,6 @@ template Portrait_Background_Glows
             }
         }
 
-        block "glow_other_player"
-        {
-            # Is Other Player
-            background = {
-                visible = "[And(Character.IsOtherPlayer, Not(Character.IsHovered))]"
-                using = Background_Portrait_Glow
-                color = { 0.8 0.4 0.55 0.6 }
-            }
-        }
-
         block "glow_selected"
         {
             background = {
