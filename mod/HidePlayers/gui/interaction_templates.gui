@@ -1423,6 +1423,7 @@ types CharacterInteraction
 
 				# Shows percentage chance of accepting
 				# MOD: Show the percentage chance even when a player decides
+				# MOD: Should humans never have an acceptance score above 50%ish as the human might say no.
 				text_single = {
 					layoutpolicy_horizontal = expanding
 					visible = "[Not( CharacterInteractionConfirmationWindow.IsAiMaybe )]" # [And( Not( CharacterInteractionConfirmationWindow.IsAiMaybe ), Not( CharacterInteractionConfirmationWindow.GetRecipient.IsPlayer ) )]
