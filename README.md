@@ -11,6 +11,7 @@ GitHub repo is [HidePlayersCK3](https://github.com/RiceyBeMe/HidePlayersCK3), pl
 - Removed the Purple outline on player characters portraits
 - Removed Players section from Outliner
 - Removed Player from character relation
+- Removed Player Map Mode
 
 ## Branches
 
