@@ -72,7 +72,7 @@ shortcutbindings = {
 	map_mode_12 = "ctrl+E" # simple terrain
 	map_mode_6 = "ctrl+A" # dejure counties
 	map_mode_7 = "ctrl+L" # court language mapmode
-	map_mode_8 = "ctrl+S" # player mapmode
+	# map_mode_8 = "ctrl+S" # player mapmode MOD disabled
 
 # Many Views
 	go_back = "B"

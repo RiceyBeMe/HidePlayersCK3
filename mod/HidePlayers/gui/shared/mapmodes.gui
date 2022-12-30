@@ -474,18 +474,19 @@ types MapModes
 					shortcut = "map_mode_7"
 				}
 
-				mm_text_button = {
-					name = "players"
-					blockoverride 'datacontext'
-					{
-						datacontext = "[GetMapMode( 'players' )]"
-					}
-					blockoverride 'visible'
-					{
-						visible = "[And( Or(GameHasMultiplePlayers, InDebugMode), CanChangeMapMode)]"
-					}
-					shortcut = "map_mode_8"
-				}
+				# MOD Hide Map Mode Players button
+				# mm_text_button = {
+				# 	name = "players"
+				# 	blockoverride 'datacontext'
+				# 	{
+				# 		datacontext = "[GetMapMode( 'players' )]"
+				# 	}
+				# 	blockoverride 'visible'
+				# 	{
+				# 		visible = "[And( Or(GameHasMultiplePlayers, InDebugMode), CanChangeMapMode)]"
+				# 	}
+				# 	shortcut = "map_mode_8"
+				# }
 			}
 		}
 	}
