@@ -119,12 +119,12 @@ types CharacterInteraction
 		}
 
 		text_multi_on_decline_summary = {}
-
+		# MOD changed enabled
 		button_primary = {
 			size = { 400 42 }
 			block "button_content" {}
 			onclick = "[MatchmakerInteractionWindow.Send]"
-			enabled = "[CharacterInteractionConfirmationWindow.CanSend]"
+			enabled = "[Or(And(Not(CharacterInteractionConfirmationWindow.IsPlayer), CharacterInteractionConfirmationWindow.CanSend), And(CharacterInteractionConfirmationWindow.IsPlayer, CharacterInteractionConfirmationWindow.IsAiAcceptNegotiation))]" # Or( And(CharacterInteractionConfirmationWindow.CanSend, Not(CharacterInteractionConfirmationWindow.IsPlayer)) , And( CharacterInteractionConfirmationWindow.IsPlayer , CharacterInteractionConfirmationWindow.IsAiAcceptNegotiation ))
 			tooltip = "[CharacterInteractionConfirmationWindow.GetCanSendDescription]"
 			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
 		}
