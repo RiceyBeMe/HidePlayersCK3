@@ -119,13 +119,17 @@ types CharacterInteraction
 		}
 
 		text_multi_on_decline_summary = {}
+		# "Send Proposal" button
 		# MOD changed enabled
 		button_primary = {
 			size = { 400 42 }
 			block "button_content" {}
 			onclick = "[MatchmakerInteractionWindow.Send]"
-			enabled = "[Or(And(Not(CharacterInteractionConfirmationWindow.IsPlayer), CharacterInteractionConfirmationWindow.CanSend), And(CharacterInteractionConfirmationWindow.IsPlayer, CharacterInteractionConfirmationWindow.IsAiAcceptNegotiation))]" # Or( And(CharacterInteractionConfirmationWindow.CanSend, Not(CharacterInteractionConfirmationWindow.IsPlayer)) , And( CharacterInteractionConfirmationWindow.IsPlayer , CharacterInteractionConfirmationWindow.IsAiAcceptNegotiation ))
-			tooltip = "[CharacterInteractionConfirmationWindow.GetCanSendDescription]"
+			# GetCanSend is always True for players
+			# Scope: CharacterInteractionConfirmationWindow
+			# (!GetRecipient.IsOtherPlayer && CanSend) || (GetRecipient.IsOtherPlayer && IsAnswerPositive)
+			enabled = "[Or(And(Not(CharacterInteractionConfirmationWindow.GetRecipient.IsOtherPlayer), CharacterInteractionConfirmationWindow.CanSend), And(CharacterInteractionConfirmationWindow.GetRecipient.IsOtherPlayer, CharacterInteractionConfirmationWindow.IsAnswerPositive))]" # MOD works for AI TODO needs testing for players
+			tooltip = "[CharacterInteractionConfirmationWindow.GetCanSendDescription]" # MOD TODO 
 			clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
 		}
 	}
