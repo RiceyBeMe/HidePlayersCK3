@@ -104,7 +104,8 @@ template character_opinion_tooltip {
 			hbox = {
 				layoutpolicy_horizontal = expanding
 				margin = { 8 0 }
-				visible = "[Character.IsPlayer]"
+				# MOD only show if Local Player bypassing logic for other players
+				visible = "[Character.IsLocalPlayer]" # WAS "[Character.IsPlayer]"
 
 				text_multi = {
 					datacontext = "[Character]"
@@ -539,11 +540,13 @@ types GameTooltipTypes
 								}
 
 								portrait_opinion = {
-									visible = "[And( Character.IsAlive, Not( Character.IsPlayer ) )]"
+									# MOD
+									visible = "[And( Character.IsAlive, Not( Character.IsLocalPlayer ) )]" # WAS "[And( Character.IsAlive, Not( Character.IsPlayer ) )]"
 								}
 
 								spacer = {
-									visible = "[And( Character.IsAlive, Not( Character.IsPlayer ) )]"
+									# MOD 
+									visible = "[And( Character.IsAlive, Not( Character.IsLocalPlayer ) )]" # WAS "[And( Character.IsAlive, Not( Character.IsPlayer ) )]"
 									size = { 8 5 }
 								}
 
@@ -602,7 +605,8 @@ types GameTooltipTypes
 							spacing = 2
 
 							text_single = {
-								visible = "[Not( Character.IsPlayer )]"
+								# MOD
+								visible = "[Not( Character.IsLocalPlayer )]" # WAS "[Not( Character.IsPlayer )]"
 								text = "[Character.GetAIPersonality]"
 								align = nobaseline
 							}
