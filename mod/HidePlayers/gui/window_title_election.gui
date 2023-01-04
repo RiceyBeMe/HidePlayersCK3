@@ -1073,7 +1073,8 @@ local_template vote_reason_tooltip
 			visible = "[And( Title.CanCharacterControlVote(Character.Self), SuccessionElectionWindow.GetTitle.GetPlayerNominee.IsValid )]"
 
 			flowcontainer = {
-				visible = "[Not(Character.IsPlayer)]"
+				# MOD
+				visible = "[Not(Character.IsLocalPlayer)]" # WAS "[Not(Character.IsPlayer)]"
 
 				direction = vertical
 				margin = { 10 10 }
