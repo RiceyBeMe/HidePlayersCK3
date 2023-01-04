@@ -265,7 +265,8 @@ window = {
 									}
 
 									text_single = {
-										visible = "[Not( Character.IsPlayer )]"
+										# MOD
+										visible = "[Not( Character.IsLocalPlayer )]" # WAS "[Not( Character.IsPlayer )]"
 										layoutpolicy_horizontal = expanding
 										text = "FACTION_WINDOW_OPINION_OF_TARGET"
 									}
