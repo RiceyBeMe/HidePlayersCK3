@@ -12,6 +12,9 @@ GitHub repo is [HidePlayersCK3](https://github.com/RiceyBeMe/HidePlayersCK3), pl
 - Removed Players section from Outliner
 - Removed Player from character relation
 - Removed Player Map Mode
+- Removed "Character controlled by" hint from hovering opinion
+- Added opinion of target for Player Characters when creating a claimant faction
+- Added vote reason for player Characters during a title election
 
 ## Branches
 
